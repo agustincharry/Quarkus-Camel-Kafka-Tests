@@ -9,6 +9,7 @@ public interface IMessageService {
     MessageModel getOneMessage(String id);
     List<MessageModel> getAllMessages();
     MessageModel addMessage(MessageModel message);
+    MessageModel addMessage(String message);
     MessageModel removeMessage(String id);
 
 }

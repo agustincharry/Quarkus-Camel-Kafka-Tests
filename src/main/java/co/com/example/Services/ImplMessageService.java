@@ -30,6 +30,13 @@ public class ImplMessageService implements IMessageService {
     }
 
     @Override
+    public MessageModel addMessage(String message) {
+        MessageModel messageModel = new MessageModel(message);
+        this.messageRepository.addMessage(messageModel);
+        return messageModel;
+    }
+
+    @Override
     public MessageModel removeMessage(String id) {
         MessageModel message = this.getOneMessage(id);
         this.messageRepository.removeMessage(message);
